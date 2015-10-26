@@ -1,0 +1,23 @@
+{
+  "name": "herokuWebhook",
+  "version": "1.0.0",
+  "description": "Simple server to test webhooks.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aklawren/simpleserver.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aklawren/simpleserver/issues"
+  },
+  "homepage": "https://github.com/aklawren/simpleserver",
+  "engines": {
+      "node": "0.12.0"
+   }
+}
