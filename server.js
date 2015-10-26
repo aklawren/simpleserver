@@ -9,8 +9,8 @@ function handleResponse(req, res){
    
    switch(path){
       case "/testingCallback":
-         console.log("req is: " + req);
          response = "Thanks for calling me back!";
+	 console.log("response is: " + response);
          break;
       default:
          break;
