@@ -21,5 +21,5 @@ function handleResponse(req, res){
 var server = http.createServer(handleResponse);
 
 server.listen(8080, function(){
-   console.log("listening on PORT 8080");
+//   console.log("listening on PORT 8080");
 });   
