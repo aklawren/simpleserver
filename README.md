@@ -9,6 +9,9 @@ This is a simple server with an /exampleService route that can serve as a stub f
 
 ## Use
 Once your server is running, from your request client of choice (browser, Postman, curl, etc.) try to make a request to:
-> localhost:8080/
+> localhost:8989/
 or
-> localhost:8080/exampleService
+> localhost:8989/exampleService
+
+Or use a curl request to POST
+> curl -X POST "http://localhost:8989" -H "accept: application/json" -H "content-type: application/json" -d "{\"name\": \"Jane Doe\", \"age\": 27, \"pets\": [{\"name\": \"Dusty\", \"taxonomy\": \"Lagomorpha\", \"diet\": [\"hay\", \"pellets\"]}]}"

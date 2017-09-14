@@ -1,6 +1,6 @@
 var http = require('http');
 var ExampleService = require('./service/exampleService');
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8989;
 
 function handleResponse(req, res){
    var method = req.method;
@@ -23,7 +23,7 @@ function handleResponse(req, res){
      res.statusCode = 200; //TODO: is there any difference between statusCode & writeHead?
      res.end(response);
    }
-   if(method == 'GET' && path == '/info'){
+     if(method == 'GET' && path == '/info'){
      res.statusCode = 200;
      res.end("TBD...");
    }
@@ -32,6 +32,21 @@ function handleResponse(req, res){
        res.statusCode == 200;
        res.end(response);
      });
+   }
+   if(method == 'POST' && path == '/'){
+      console.log("req headers were ");
+      console.log(req.headers);
+      var body = "";
+      req.on('data', (chunk) => {
+        body += chunk;
+      });
+      req.on('end', () => {
+        console.log("req body was ");
+        console.log(body);
+        res.statusCode == 200;
+        res.end('thanks for your data!');
+      });
+
    }
    else{
      res.statusCode = 404;
